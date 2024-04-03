@@ -1,4 +1,4 @@
-# Jag-k Tap
+# Jag_k's Homebrew Tap
 
 ## How do I install these formulae?
 
