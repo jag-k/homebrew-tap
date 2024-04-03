@@ -1,14 +1,13 @@
 class GitRaycast < Formula
-  VERSION = "0.0.1".freeze
   NAME = "git-raycast".freeze
   REPO = "jag-k/git-raycast".freeze
-  
+
   desc "Automate git using Raycast AI"
-  
+
   homepage "https://github.com/#{REPO}"
-  url "https://github.com/#{REPO}/releases/download/v#{VERSION}/#{NAME}"
+  url "https://github.com/jag-k/git-raycast/releases/download/v0.0.1/git-raycast"
   license "MIT"
-  sha256 "7deb3f91df9b992dd691a8038240ab48877c032e21c6ebab9ad4903e6d5bcbee"
+  sha256 "11fd7783eeae2913ed11d508b4ea6491be18d820a300e7cdc4a2aa17c71f9022"
 
   head "https://github.com/#{REPO}.git"
   head do
