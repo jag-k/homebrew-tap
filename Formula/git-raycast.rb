@@ -14,7 +14,9 @@ class GitRaycast < Formula
 
   def install
     system "go", "build", "-o", NAME, "cmd/#{NAME}" if build?
+    system "#{bin}/#{NAME}", "--create-man-page", "man.1"
     bin.install NAME
+    man1.install "man.1"
   end
 
   test do
