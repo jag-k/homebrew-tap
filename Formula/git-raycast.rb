@@ -13,7 +13,7 @@ class GitRaycast < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", NAME, "cmd/#{NAME}" if build?
+    system "go", "build", "-o", NAME, "cmd/#{NAME}" if build.head?
     system "#{bin}/#{NAME}", "--create-man-page", "man.1"
     bin.install NAME
     man1.install "man.1"
