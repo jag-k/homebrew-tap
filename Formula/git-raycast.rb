@@ -5,8 +5,8 @@ class GitRaycast < Formula
   desc "Automate git using Raycast AI"
 
   homepage "https://github.com/#{REPO}"
-  url "https://github.com/jag-k/git-raycast/releases/download/v0.2.0/git-raycast.tar.gz"
-  sha256 "26fd57b7516c69105c3ba21b4d2be18c5e5d14e5e87c2cca5ac5de6c43dcabbc"
+  url "https://github.com/jag-k/git-raycast/releases/download/v0.2.1/git-raycast.tar.gz"
+  sha256 "cf7345b7ba3349035c73a40a9fa22a52fe67be06abae265e96999eba5d2170cf"
   license "MIT"
 
   head do
