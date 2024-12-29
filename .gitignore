@@ -1,0 +1,32 @@
+# Homebrew artifacts
+*.bottle
+*.bottle.json
+*.bottle.tar.gz
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*~
+*.orig
+*.log
+
+# Build artifacts
+/bin/
+/pkg/
+/vendor/
+/Godeps/
+/.bundle/
+/coverage/
+
+*.tar.gz
+*_output.txt
+skipped_or_failed_formulae-*.txt
