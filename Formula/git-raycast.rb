@@ -10,7 +10,7 @@ class GitRaycast < Formula
   depends_on :macos
 
   url "https://github.com/jag-k/git-raycast/releases/download/v0.3.0/git-raycast.tar.gz"
-  sha256 "cb3a43d75e216169c147ca59e22acbdd9d247bae5d690158eb89641dcb17b063"
+  sha256 "b0fee2ce8abff2094308ab5baf6b7c7413d26486e8f8361b54b14e36aa5f3d10"
 
   def install
     if build.head?
