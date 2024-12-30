@@ -10,7 +10,7 @@ class GitRaycast < Formula
   depends_on :macos
 
   url "https://github.com/jag-k/git-raycast/releases/download/v0.3.0/git-raycast.tar.gz"
-  sha256 "e9fc6d0ce9db68670cafc489665d821e358d8f4c7e2b112ff331b814da621ef0"
+  sha256 "a9be019a1adc4fe30da4dc85684e37eaed8e7aaae5c5f79df3668146390f01b2"
 
   def install
     if build.head?
@@ -28,21 +28,9 @@ class GitRaycast < Formula
     completion_files_missing << "zsh" unless File.exist?(zsh_completion_path)
     completion_files_missing << "fish" unless File.exist?(fish_completion_path)
 
-    if completion_files_missing.any?
-      opoo "Shell completion files are missing for: #{completion_files_missing.join(", ")}"
-    end
-
-    if File.exist?(bash_completion_path)
-      bash_completion.install bash_completion_path => "git-raycast.bash_completion"
-    end
-
-    if File.exist?(zsh_completion_path)
-      zsh_completion.install zsh_completion_path => "_git-raycast"
-    end
-
-    if File.exist?(fish_completion_path)
-      fish_completion.install fish_completion_path
-    end
+    bash_completion.install bash_completion_path => "git-raycast.bash_completion" if File.exist?(bash_completion_path)
+    zsh_completion.install zsh_completion_path => "_git-raycast" if File.exist?(zsh_completion_path)
+    fish_completion.install fish_completion_path if File.exist?(fish_completion_path)
   end
 
   livecheck do
@@ -52,10 +40,10 @@ class GitRaycast < Formula
 
   head do
     url "https://github.com/jag-k/git-raycast.git", branch: "main"
-    depends_on "go" => :build  # Only needed for building from source
+    depends_on "go" => :build
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/#{NAME} --version")
+    assert_match version.to_s, shell_output("git-raycast --version")
   end
 end
