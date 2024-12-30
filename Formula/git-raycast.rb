@@ -10,7 +10,7 @@ class GitRaycast < Formula
   depends_on :macos
 
   url "https://github.com/jag-k/git-raycast/releases/download/v0.3.0/git-raycast.tar.gz"
-  sha256 "a9be019a1adc4fe30da4dc85684e37eaed8e7aaae5c5f79df3668146390f01b2"
+  sha256 "cb3a43d75e216169c147ca59e22acbdd9d247bae5d690158eb89641dcb17b063"
 
   def install
     if build.head?
@@ -22,11 +22,6 @@ class GitRaycast < Formula
     bash_completion_path = "git-raycast.bash"
     zsh_completion_path = "git-raycast.zsh"
     fish_completion_path = "git-raycast.fish"
-
-    completion_files_missing = []
-    completion_files_missing << "bash" unless File.exist?(bash_completion_path)
-    completion_files_missing << "zsh" unless File.exist?(zsh_completion_path)
-    completion_files_missing << "fish" unless File.exist?(fish_completion_path)
 
     bash_completion.install bash_completion_path => "git-raycast.bash_completion" if File.exist?(bash_completion_path)
     zsh_completion.install zsh_completion_path => "_git-raycast" if File.exist?(zsh_completion_path)
@@ -44,6 +39,6 @@ class GitRaycast < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("git-raycast --version")
+    assert_match version.to_s, shell_output("#{bin}/git-raycast --version")
   end
 end
