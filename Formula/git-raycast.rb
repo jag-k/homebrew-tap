@@ -5,12 +5,12 @@
 class GitRaycast < Formula
   desc "Automate git using Raycast AI"
   homepage "https://github.com/jag-k/git-raycast"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
   depends_on :macos
 
-  url "https://github.com/jag-k/git-raycast/releases/download/v0.3.0/git-raycast.tar.gz"
-  sha256 "b0fee2ce8abff2094308ab5baf6b7c7413d26486e8f8361b54b14e36aa5f3d10"
+  url "https://github.com/jag-k/git-raycast/releases/download/v0.4.0/git-raycast.tar.gz"
+  sha256 "5256923078fddfff33a6997131e5c865464a94025e3ea1cd40fa1108a13a5d3e"
 
   def install
     if build.head?
