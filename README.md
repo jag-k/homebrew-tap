@@ -1,10 +1,10 @@
 # Jag_k's Homebrew Tap
 
-## How do I install these formulae?
+## How do I install these casks?
 
-`brew install jag-k/tap/<formula>`
+`brew install jag-k/tap/<cask>`
 
-Or `brew tap jag-k/tap` and then `brew install <formula>`.
+Or `brew tap jag-k/tap` and then `brew install <cask>`.
 
 ## Documentation
 
