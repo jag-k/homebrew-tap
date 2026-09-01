@@ -4,15 +4,15 @@
 cask "clipboard-transformer" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.5"
+  version "0.1.6"
 
   name "Clipboard Transformer"
   desc "Rule-based clipboard transformer"
   homepage "https://github.com/jag-k/clipboard-transformer"
 
   on_macos do
-    sha256 arm:   "c3455aaca472edcc2e706066602c0a2ce88796137c37e449abf88bde771edd09",
-           intel: "0a1971d837f31488a537656df2c2285d059a644e89903ab0a9740a8988f2cf67"
+    sha256 arm:   "f8599bd1b4d6c5293f5728425147cf60a7fad34f626be574632624ddf242c7e4",
+           intel: "ae60077a376c6c10581b575d03943fef5bb854b57124c434dcab84770000db3b"
 
     url "https://github.com/jag-k/clipboard-transformer/releases/download/v#{version}/clipboard-transformer-#{version}-#{arch}-apple-darwin-homebrew.zip"
 
@@ -27,7 +27,7 @@ cask "clipboard-transformer" do
   end
 
   on_linux do
-    sha256 "793dba55de5743369d754bea1905d157b1b02154f70122f597b139cf9c74e411"
+    sha256 "ad700f36f95ec4b66eb6a4ed000bed7244071be13104620f7f4d569256aaf164"
 
     url "https://github.com/jag-k/clipboard-transformer/releases/download/v#{version}/clipboard-transformer-#{version}-x86_64-linux-homebrew.tar.xz"
 
